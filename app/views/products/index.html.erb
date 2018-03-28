@@ -19,8 +19,10 @@
                 <th>Name</th>
                 <th>url</th>
                 <th>Description</th>
+                <% if signed_in? %>
                 <th>Delete</th>
                 <th>Edit</th>
+                <% end  %>
               </tr>
             </thead>
             <tbody>
