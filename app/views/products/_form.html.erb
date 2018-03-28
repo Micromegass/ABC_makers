@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1 class="text-center"><%= form_title %></h1>
+
+      <%= form_for @product do |i| %>
+
+        <div>
+          <label> Name </label>
+        </div>
+          <div>
+            <%= i.text_field :name, class: "form-control" %>
+          </div>
+            <div>
+              <label> Description </label>
+            </div>
+              <div>
+                <%= i.text_area :description, class: "form-control"%>
+              </div>
+                <div>
+                  <label> Url </label>
+                </div>
+                  <div>
+                    <%= i.text_field :url, class: "form-control"%>
+                  </div>
+                  <br>
+                    <div>
+                      <%= i.submit form_title, class: "btn btn-light btn-lg btn-block"%>
+                    </div>
+                    <% end  %>
+<br>
+
+<div>
+<%= link_to "Back", products_path, class: "btn btn-dark"%>
+</div>
+
+    </div>
+  </div>
+</div>
