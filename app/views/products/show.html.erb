@@ -1,5 +1,5 @@
 
-<div class="container">
+<!-- <div class="container">
   <table class="table">
   <thead class="thead thead-dark">
     <tr>
@@ -20,4 +20,25 @@
   </tbody>
 </table>
 <%= link_to "Back", products_path, class: "btn btn-light"%>
-</div>
+</div> -->
+
+<div class="product-page">
+  <header class="product-header">
+    <h1><%= @product.name %></h1>
+    <p><%= @product.description %></p>
+    <a href="<%= @product.url %>" class="btn btn-primary btn-lg" target="_blank">Get it!</a>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="votes">
+          <h2>Votes</h2>
+        </div>
+
+        <div class="comments">
+          <h2>Comments</h2>
+        </div>
+      </div>
+    </div>
+  </div>
