@@ -5,6 +5,15 @@
 
       <h1> create new user </h1>
 
+      <% if @user.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end  %>
       <%= form_for @user do |i| %>
 
         <div class="form-group">
