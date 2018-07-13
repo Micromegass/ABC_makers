@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
+   delete 'logout', to: 'sessions#destroy'
 
   root 'products#index'
 end
