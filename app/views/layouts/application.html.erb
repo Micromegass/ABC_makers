@@ -57,15 +57,11 @@
       </div><!-- /.container -->
     </nav>
 
-    <% if flash[:notice] %>
-    <div class="alert alert-info">
-    <%= flash[:notice] %>
-    </div>
-    <% end  %>
-
-    <!-- <% if signed_in? %>
-    <div>Goodday to you  <%= current_user.name %> <%= link_to "Logout", logout_path, method: :delete %></div>
-    <% end %> -->
+   <div class="flash">
+  <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  </div>
 
     <%= yield %>
   </body>
