@@ -5,11 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
-5.times do |i|
-  id = i + 1
-  Product.create!(name: "Product #{id}",
-                 description: "description for #{id}",
+
+Product.create!(name: "Aguila",
+               description: "La cervezita mas rico del mundo",
+               url: "http....",
+              )
+
+Product.create!(name: "Pilsen",
+               description: "Una cerveza sabrosita hecho en Medallo",
+               url: "http....",
+              )
+
+50.times do |i|
+  Product.create!(name: Faker::Beer.name,
+                 description: Faker::Beer.style,
                  url: "http....",
                 )
+  # id = i + 1
 end
