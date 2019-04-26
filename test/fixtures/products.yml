@@ -17,12 +17,7 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  url: MyString
-  description: MyText
-
-two:
-  name: MyString
-  url: MyString
-  description: MyText
+Erdinger:
+  name: "Weizen"
+  url: "www.weizen.de"
+  description: "cerveza de alemania"
